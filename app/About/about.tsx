@@ -94,7 +94,7 @@ const about = () => {
               responsive web and mobile apps using a range of technologies.
               Working on agile teams has allowed me to collaborate effectively
               with colleagues and ensure timely project delivery. Check out my
-              work bellow and see some cool things I've created in my spare
+              work bellow and see some cool things I&aposve created in my spare
               time.
             </p>
           </div>
