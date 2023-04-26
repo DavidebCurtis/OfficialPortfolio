@@ -32,9 +32,7 @@ export default function Home(props: Props) {
 
   let iconStyles = { color: 'white' };
 
-  const handleScroll = (
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
+  const handleScroll = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const icon: any = document.getElementById('arrow');
 
