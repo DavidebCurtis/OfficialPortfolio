@@ -1,9 +1,8 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { setTimeout } from 'timers/promises';
 
-export const useScrollPosition = () => {
+const Nav = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -18,15 +17,9 @@ export const useScrollPosition = () => {
     return () => window.removeEventListener('scroll', updatePosition);
   }, []);
 
-  return scrollPosition;
-};
-
-const Nav = () => {
   function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
   }
-
-  const scrollPosition = useScrollPosition();
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();

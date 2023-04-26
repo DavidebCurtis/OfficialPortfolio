@@ -20,15 +20,15 @@ const DMSans = DM_Sans({ weight: ['400'], subsets: ['latin'] });
 interface Props {}
 
 export default function Home(props: Props) {
-  const handleClick = (event: MouseEvent): void => {
-    event.preventDefault();
-    const icon: any = document.getElementById('arrow');
+  // const handleClick = (event: MouseEvent): void => {
+  //   event.preventDefault();
+  //   const icon: any = document.getElementById('arrow');
 
-    icon.classList.remove('arrow');
-    setTimeout(() => {
-      icon.classList.add('arrow');
-    }, 0);
-  };
+  //   icon.classList.remove('arrow');
+  //   setTimeout(() => {
+  //     icon.classList.add('arrow');
+  //   }, 0);
+  // };
 
   let iconStyles = { color: 'white' };
 

@@ -1,62 +1,64 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { MouseEvent } from 'react';
 import davidheadshot from '../davidheadshot.png';
 
-const about = () => {
-  window.onload = function () {
-    const tiltEffect = {
-      max: 6,
-      perspective: 1000,
-      scale: 1,
-      speed: 3000,
-      easing: 'cubic-bezier(.03,.98,.52,.99)',
-    };
+const About = () => {
+  useEffect(() => {
+    window.onload = function () {
+      const tiltEffect = {
+        max: 6,
+        perspective: 1000,
+        scale: 1,
+        speed: 3000,
+        easing: 'cubic-bezier(.03,.98,.52,.99)',
+      };
 
-    const card: any = document.getElementById('card');
-    card.addEventListener('mouseenter', cardMouseEnter);
-    card.addEventListener('mousemove', cardMouseMove);
-    card.addEventListener('mouseleave', cardMouseLeave);
+      const card: any = document.getElementById('card');
+      card.addEventListener('mouseenter', cardMouseEnter);
+      card.addEventListener('mousemove', cardMouseMove);
+      card.addEventListener('mouseleave', cardMouseLeave);
 
-    function setTransition(event: MouseEvent) {
-      clearTimeout(card.transitionTimedOut);
+      function setTransition(event: MouseEvent) {
+        clearTimeout(card.transitionTimedOut);
 
-      card.style.transition = `transform ${tiltEffect.speed}ms ${tiltEffect.easing}`;
-      card.transitionTimedOut = setTimeout(() => {
-        card.style.transition = '';
-      }, tiltEffect.speed);
-    }
-
-    function cardMouseEnter(event: MouseEvent) {
-      setTransition(card);
-    }
-
-    function cardMouseLeave(event: MouseEvent) {
-      card.style.transform = `perspective(${tiltEffect.perspective}px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-    }
-
-    function cardMouseMove(event: MouseEvent) {
-      if (card instanceof HTMLDivElement) {
-        const cardWidth = card.offsetWidth;
-        const cardHeight = card.offsetHeight;
-        const centerX = card.offsetLeft + cardWidth / 2;
-        const centerY = cardHeight / 2;
-        const mouseX = event.clientX - centerX;
-        const mouseY = event.clientY - centerY;
-        const rotateX = (
-          (+1 * tiltEffect.max * mouseY) /
-          (cardHeight / 2)
-        ).toFixed(2);
-        const rotateY = (
-          (-1 * tiltEffect.max * mouseX) /
-          (cardWidth / 2)
-        ).toFixed(2);
-
-        card.style.transform = `perspective(${tiltEffect.perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(${tiltEffect.scale}, ${tiltEffect.scale}, ${tiltEffect.scale})`;
+        card.style.transition = `transform ${tiltEffect.speed}ms ${tiltEffect.easing}`;
+        card.transitionTimedOut = setTimeout(() => {
+          card.style.transition = '';
+        }, tiltEffect.speed);
       }
-    }
-  };
+
+      function cardMouseEnter(event: MouseEvent) {
+        setTransition(card);
+      }
+
+      function cardMouseLeave(event: MouseEvent) {
+        card.style.transform = `perspective(${tiltEffect.perspective}px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+      }
+
+      function cardMouseMove(event: MouseEvent) {
+        if (card instanceof HTMLDivElement) {
+          const cardWidth = card.offsetWidth;
+          const cardHeight = card.offsetHeight;
+          const centerX = card.offsetLeft + cardWidth / 2;
+          const centerY = cardHeight / 2;
+          const mouseX = event.clientX - centerX;
+          const mouseY = event.clientY - centerY;
+          const rotateX = (
+            (+1 * tiltEffect.max * mouseY) /
+            (cardHeight / 2)
+          ).toFixed(2);
+          const rotateY = (
+            (-1 * tiltEffect.max * mouseX) /
+            (cardWidth / 2)
+          ).toFixed(2);
+
+          card.style.transform = `perspective(${tiltEffect.perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(${tiltEffect.scale}, ${tiltEffect.scale}, ${tiltEffect.scale})`;
+        }
+      }
+    };
+  }, []);
 
   return (
     <div
@@ -104,4 +106,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
