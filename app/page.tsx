@@ -71,8 +71,8 @@ export default function Home(props: Props) {
             </div>
             <div className='text mb-10'>
               <p className='max-w-md selection:bg-primary selection:text-coal'>
-                I'm software developer based in North Carolina, and I'm very
-                passionate and dedicated to my work.
+                {`I'm software developer based in North Carolina, and I'm very
+                passionate and dedicated to my work.`}
               </p>
             </div>
             <div className='buttons flex'>

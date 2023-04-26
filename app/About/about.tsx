@@ -90,12 +90,12 @@ const about = () => {
               applications are built and run.
             </p>
             <p className='mt-5 leading-loose'>
-              Since then I have devoted my time to designing and developing
+              {`Since then I have devoted my time to designing and developing
               responsive web and mobile apps using a range of technologies.
               Working on agile teams has allowed me to collaborate effectively
               with colleagues and ensure timely project delivery. Check out my
               work bellow and see some cool things I've created in my spare
-              time.
+              time.`}
             </p>
           </div>
         </div>
