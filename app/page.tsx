@@ -53,10 +53,10 @@ export default function Home(props: Props) {
   return (
     <main
       id='intro'
-      className={`flex flex-col ${DMSans.className} scroll-smooth`}
+      className={`flex flex-col ${DMSans.className} scroll-smooth lg:h-screen`}
     >
-      <div className='intro flex flex-col items-center justify-between'>
-        <div className='content pt-24 w-5/6 grid grid-cols-2 lg:gap-10 pl-20'>
+      <div className='intro flex flex-col items-center justify-center lg:justify-between'>
+        <div className='content justify-center flex lg:grid pt-24 w-5/6 grid grid-cols-1 lg:grid-cols-2 lg:gap-10 lg:pl-20 pl-0'>
           <div className='details initial flex flex-col mt-10'>
             <div className={`short container relative mb-5`}>
               <h1
@@ -71,32 +71,37 @@ export default function Home(props: Props) {
             </div>
             <div className='text mb-10'>
               <p className='max-w-md selection:bg-primary selection:text-coal'>
-                I&apos;m software developer based in North Carolina, and
+                I&apos;m a software developer based in North Carolina, and
                 I&apos;m very passionate and dedicated to my work.
               </p>
             </div>
             <div className='buttons flex'>
               <button className='flex-initial shadow-custom animate-waveButton hover:animate-waveButton relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-tl from-primary via-secondary to-primary hover:text-white dark:text-white group'>
-                <span className='flex items-center justify-between relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-                  Say Hey
-                  <svg
-                    width='24'
-                    height='25'
-                    viewBox='0 0 24 25'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                    id='null'
-                    className='svg replaced-svg ml-2 group-hover:animate-wiggle'
+                <span className=''>
+                  <a
+                    className='text-sm flex items-center justify-between relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'
+                    href='mailto: heythereimdavidcurtis@gmail.com'
                   >
-                    <path
-                      d='M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z'
-                      fill='white'
-                    ></path>
-                    <path
-                      d='M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z'
-                      fill='white'
-                    ></path>
-                  </svg>
+                    Say Hey
+                    <svg
+                      width='24'
+                      height='25'
+                      viewBox='0 0 24 25'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                      id='null'
+                      className='svg replaced-svg ml-2 group-hover:animate-wiggle'
+                    >
+                      <path
+                        d='M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z'
+                        fill='white'
+                      ></path>
+                      <path
+                        d='M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z'
+                        fill='white'
+                      ></path>
+                    </svg>
+                  </a>
                 </span>
               </button>
               <button className='flex-initial relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 text-sm font-medium'>
@@ -156,7 +161,7 @@ export default function Home(props: Props) {
           <MouseParallaxContainer
             globalFactorX={0.1}
             globalFactorY={0.1}
-            className='z-20'
+            className='z-20 hidden lg:block'
           >
             <MouseParallaxChild
               factorX={0.1}

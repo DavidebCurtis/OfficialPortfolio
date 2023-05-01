@@ -47,11 +47,11 @@ const Nav = () => {
         scrollPosition > 0
           ? 'shadow-sm shadow-[rgba(255,255,255,.08)] py-1 bg-coal'
           : 'shadow-none py-6',
-        'sticky top-0 z-50 transition-shadow px-28 transition-padding transition-duration-1000 transition-delay-100 ease'
+        'sticky top-0 z-50 transition-shadow md:px-28 transition-padding transition-duration-1000 transition-delay-100 ease'
       )}
     >
       <div className='inner flex place-content-between items-center'>
-        <div className='logo flex-initial'>
+        <div className='logo hidden md:flex-initial md:flex'>
           <ul className='flex'>
             <li className='flex-initial text-4xl hover:animate-waveFast animate-wave bg-gradient-to-tl from-primary via-secondary to-primary bg-clip-text text-transparent text-5xl font-black'>
               <Link onClick={handleScroll} href='#header'>
