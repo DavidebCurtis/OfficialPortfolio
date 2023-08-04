@@ -96,7 +96,7 @@ const Nav = () => {
             </a>
 
             <a
-              className='flex-initial pl-5 flex items-end'
+              className='flex-initial pl-5 flex items-end cursor-pointer'
               data-menu-name='Resume'
               id='downloadLink'
               onClick={() => download(fileUrl, filename)}
