@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --foreground-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 27,18,29;
     --background-middle-rgb: 18,15,47;
     --background-end-rgb: 27,18,29;
@@ -16,14 +16,14 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 27,18,29;
     --background-middle-rgb: 18,15,47;
     --background-end-rgb: 27,18,29;
   }
-}
+} */
 
 h1 {
   @apply text-5xl;
