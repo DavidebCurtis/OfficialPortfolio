@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import useDownloader from 'react-use-downloader';
 
 const Nav = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -39,6 +40,10 @@ const Nav = () => {
       behavior: 'smooth',
     });
   };
+
+  const { download } = useDownloader();
+  const fileUrl = '/SWEResume.pdf';
+  const filename = 'DavidCurtisresume.pdf';
 
   return (
     <header
@@ -93,8 +98,8 @@ const Nav = () => {
             <a
               className='flex-initial pl-5 flex items-end'
               data-menu-name='Resume'
-              href='#resume'
-              onClick={handleScroll}
+              id='downloadLink'
+              onClick={() => download(fileUrl, filename)}
             >
               Resume
             </a>

@@ -79,7 +79,7 @@ export default function Home(props: Props) {
               <button className='flex-initial shadow-custom animate-waveButton hover:animate-waveButton relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-tl from-primary via-secondary to-primary hover:text-white dark:text-white group'>
                 <span className=''>
                   <a
-                    className='text-sm flex items-center justify-between relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'
+                    className='text-sm flex text-white items-center justify-between relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0'
                     href='mailto: heythereimdavidcurtis@gmail.com'
                   >
                     Say Hey

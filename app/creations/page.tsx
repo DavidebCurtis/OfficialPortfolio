@@ -82,7 +82,7 @@ const projects = () => {
           </div>
           <div className='relative absolute inset-0 cursor-pointer'>
             <Image
-              className='object-cover h-full max-w-full rounded-lg p-4 bg-neutral-100 bg-opacity-[.08] border-[1px] border-neutral-100'
+              className='object-cover h-full w-full rounded-lg p-4 bg-neutral-100 bg-opacity-[.08] border-[1px] border-neutral-100'
               src={taskmaster}
               alt='Task Master'
               placeholder='blur'
@@ -99,7 +99,7 @@ const projects = () => {
           </div>
           <div className='relative absolute inset-0 cursor-pointer'>
             <Image
-              className='object-cover h-full max-w-full rounded-lg p-4 bg-neutral-100 bg-opacity-[.08] border-[1px] border-neutral-100'
+              className='object-cover h-full w-full rounded-lg p-4 bg-neutral-100 bg-opacity-[.08] border-[1px] border-neutral-100'
               src={placeholder}
               alt='Coming Soon'
               placeholder='blur'
@@ -111,7 +111,7 @@ const projects = () => {
           </div>
           <div className='relative absolute inset-0 cursor-pointer'>
             <Image
-              className='object-cover h-full max-w-full rounded-lg p-4 bg-neutral-100 bg-opacity-[.08] border-[1px] border-neutral-100'
+              className='object-cover h-full w-full rounded-lg p-4 bg-neutral-100 bg-opacity-[.08] border-[1px] border-neutral-100'
               src={placeholder}
               alt='Coming Soon'
               placeholder='blur'

@@ -21,6 +21,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-parallax-mouse": "^2.0.1",
+    "react-use-downloader": "^1.2.4",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
   }
