@@ -135,7 +135,10 @@ export default function Home(props: Props) {
               <ul className='flex flex-row justify-center items-center'>
                 <li className='hover:animate-waveButton flex justify-center items-center shadow-custom bg-gradient-to-tl from-secondary to-primary rounded-full w-10 h-10 mr-2'>
                   <div className='flex justify-center items-center bg-gray-900 rounded-full w-[2.3rem] h-[2.3rem]'>
-                    <a href='#'>
+                    <a
+                      href='https://www.linkedin.com/in/davidcurtis92/'
+                      target='_blank'
+                    >
                       <AiOutlineLinkedin
                         size='20'
                         style={iconStyles}
@@ -146,7 +149,7 @@ export default function Home(props: Props) {
                 </li>
                 <li className='hover:animate-waveButton flex justify-center items-center shadow-custom bg-gradient-to-tl from-secondary to-primary rounded-full w-10 h-10'>
                   <div className='flex justify-center items-center bg-gray-900 rounded-full w-[2.3rem] h-[2.3rem]'>
-                    <a href='#'>
+                    <a href='https://github.com/DavidebCurtis' target='_blank'>
                       <AiOutlineGithub
                         size='20'
                         style={iconStyles}
